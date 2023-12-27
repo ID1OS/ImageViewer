@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Installing FileExplorer..."
+sudo apt-get install git
+sudo apt install python3
+sudo apt install python3-pip
+pip3 install click
+pip3 install pygame
+Dest_Dir="/usr"
+sudo rm -rvf $Dest_Dir/ImageViewer
+sudo mkdir -pv $Dest_Dir/ImageViewer
+Dest_Dir=$Dest_Dir"/ImageViewer"
+
+
+cd $Home_dir
+cat >> .bashrc << "EOF"
+alias ImageViewer="python3 /usr/ImageViewer/src/image viewer.py"
+EOF
+source .bashrc
+echo "image viewer installed successfully!"
