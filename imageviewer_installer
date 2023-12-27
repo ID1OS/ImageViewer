@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Installing FileExplorer..."
+echo "Installing ImageViewer..."
 sudo apt-get install git
 sudo apt install python3
 sudo apt install python3-pip
@@ -10,10 +10,10 @@ sudo rm -rvf $Dest_Dir/ImageViewer
 sudo mkdir -pv $Dest_Dir/ImageViewer
 Dest_Dir=$Dest_Dir"/ImageViewer"
 
-
+cp image_viewer.py $Dest_Dir
 cd $Home_dir
 cat >> .bashrc << "EOF"
-alias ImageViewer="python3 /usr/ImageViewer/src/image viewer.py"
+alias ImageViewer="python3 /usr/ImageViewer/image viewer.py"
 EOF
 source .bashrc
 echo "image viewer installed successfully!"
