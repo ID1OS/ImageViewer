@@ -9,8 +9,8 @@ Dest_Dir="/usr"
 sudo rm -rvf $Dest_Dir/ImageViewer
 sudo mkdir -pv $Dest_Dir/ImageViewer
 Dest_Dir=$Dest_Dir"/ImageViewer"
-chmod a+r $Dest_Dir
-chmod a+w $Dest_Dir
+sudo chmod a+r $Dest_Dir
+sudo chmod a+w $Dest_Dir
 cp image_viewer.py $Dest_Dir
 chmod a+x $Dest_Dir/*
 cd $Home_dir
